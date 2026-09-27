@@ -32,9 +32,10 @@ No suitable dark frames were available for the selected observing night.
 
 ## Amplifier normalization
 
-An exploratory global normalization of the dome flats introduced an artificial discontinuity between the two CCD amplifier regions. The flat-field procedure was therefore revised to normalize each amplifier independently before the five flats were combined.
-
-With the final master flat, the amplifier median-response ratio is approximately unity and the large-scale background dispersion is substantially reduced without introducing a step at the readout boundary.
+The final amplifier median-response ratio was 0.99992. After applying
+the revised flat, the large-scale background dispersion decreased from
+approximately 0.55 ADU to 0.29 ADU, while the background difference
+between the two amplifier regions remained close to its pre-flat value.
 
 ## Repository structure
 
@@ -47,7 +48,7 @@ noirlab-ccd-reduction/
 │   ├── master_flat_r.png
 │   ├── 158P_calibrated_r.png
 │   └── background_uniformity.png
-├── notebooks/
+├── Notebooks/
 │   ├── 00_data_inspection.ipynb
 │   ├── 01_master_bias.ipynb
 │   ├── 02_master_flat.ipynb
@@ -56,6 +57,17 @@ noirlab-ccd-reduction/
 ├── .gitignore
 └── README.md
 ```
+## Final result
+
+The final calibrated r-band science exposure is shown below.
+
+![Calibrated 158P science image](Figures/158P_calibrated_r.png)
+
+The amplifier-normalized flat substantially improved the large-scale
+background uniformity while preserving the sky level across the
+two-amplifier boundary.
+
+![Background uniformity](Figures/background_uniformity.png)
 
 ## Software
 
