@@ -30,6 +30,7 @@ No suitable dark frames were available for the selected observing night.
 9. Validate the large-scale background uniformity.
 10. Save the final calibrated FITS image for inspection in SAOImage DS9.
 
+
 ## Amplifier normalization
 
 The final amplifier median-response ratio was 0.99992. After applying
